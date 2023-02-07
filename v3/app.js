@@ -21,7 +21,7 @@ app.set("view engine","ejs");
 
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
-mongoose.connect("mongodb://localhost:27017/yelp_camp_v3", { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect("mongodb+srv://vishalyadav:Mongo7138@cluster0.0zbmvdd.mongodb.net/yelp_camp_v3?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true })
 mongoose.set('useFindAndModify', false);
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: true }));
